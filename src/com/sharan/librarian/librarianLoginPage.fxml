@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121"
+            fx:controller="com.sharan.Controller" fx:id="librarianSignIn">
+
+    <top>
+        <GridPane alignment="TOP_CENTER" hgap="10" vgap="10">
+
+            <Label id="heading" style="-fx-text-fill: BLUE; -fx-background-color:YELLOW  " text="Library Management System Librarian Login" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <font>
+                    <Font name="Times New Roman bold" size="36" />
+                </font>
+            </Label>
+
+        </GridPane>
+    </top>
+    <center>
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <VBox GridPane.columnIndex="0" alignment="CENTER" GridPane.rowIndex="0" spacing="18">
+                <Text text="Enter Username and Password to Login">
+                    <font>
+                        <Font name="Comic Sans" size="16" />
+                    </font>
+                </Text>
+                <HBox spacing="15">
+                    <Label text="Username: " textAlignment="RIGHT">
+                        <font>
+                            <Font name="Comic Sans" size="14" />
+                        </font>
+                    </Label>
+                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                </HBox>
+                <HBox spacing="15">
+                    <Label text="Password: " textAlignment="RIGHT">
+                        <font>
+                            <Font name="Comic Sans" size="14" />
+                        </font>
+                    </Label>
+                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                </HBox>
+                <HBox spacing="15">
+                    <Button text="Login" style="-fx-text-fill:WHITE; -fx-background-color:GREEN"
+                            textAlignment="CENTER" wrapText="true"  onAction="#handleButtonClickLibrarianSignIn">
+                        <font>
+                            <Font name="Comic Sans MS" size="24.0" />
+                        </font>
+                    </Button>
+
+                    <Button text="Return to Main Screen " style="-fx-text-fill:WHITE; -fx-background-color:GREEN"
+                            textAlignment="CENTER" wrapText="true" onAction="#handleButtonClickReturntoMainMenu">
+                        <font>
+                            <Font name="Comic Sans MS" size="24.0" />
+                        </font>
+                    </Button>
+                </HBox>
+
+            </VBox>
+
+              </GridPane>
+    </center>
+</BorderPane>
