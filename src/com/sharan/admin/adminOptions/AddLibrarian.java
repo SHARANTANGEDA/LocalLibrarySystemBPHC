@@ -46,7 +46,7 @@ public class AddLibrarian extends AdminSection {
         String address;
         String city;
         boolean checker;
-        int contact;
+        long contact;
         name = nameField.getText().trim();
         password = passwordField.getText().trim();
         email = emailField.getText().trim();
@@ -55,7 +55,6 @@ public class AddLibrarian extends AdminSection {
         if (numberField.getText().trim().isEmpty()) {
             checker = false;
         } else {
-            contact = Integer.parseInt(numberField.getText().trim());
             checker = true;
         }
         if ((!name.isEmpty()) && (!password.isEmpty()) && (!email.isEmpty()) && (!address.isEmpty()) && (!city.isEmpty()) && (checker)) {

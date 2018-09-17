@@ -17,9 +17,19 @@ public class AdminSection extends Controller {
     protected BorderPane addLibrarian;
 
     @FXML
+    protected BorderPane deleteLibrarian;
+
+    @FXML
     public void handleButtonClickAddLibrarian(ActionEvent event) throws Exception {
         fileName = "adminOptions/addLibrarian.fxml";
         addLibrarian = FXMLLoader.load(getClass().getResource(fileName));
         adminSection.getChildren().setAll(addLibrarian);
+    }
+
+    @FXML
+    public void handleButtonClickDeleteLibrarian(ActionEvent event) throws Exception {
+        fileName="adminOptions/deleteLibrar.fxml";
+        deleteLibrarian=FXMLLoader.load(getClass().getResource(fileName));
+        adminSection.getChildren().setAll(deleteLibrarian);
     }
 }

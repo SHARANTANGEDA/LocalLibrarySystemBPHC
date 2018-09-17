@@ -23,11 +23,6 @@ public class Main extends Application {
         }
 
     public static void main(String[] args){
-        DataBaseFields dataBaseFields = new DataBaseFields();
-        dataBaseFields.initializeConnection();
-        dataBaseFields.addLibrarianDetails("Ram","0000","Ram.com","Madhapur","Hyd","9999999999");
-        dataBaseFields.deleteLibrarianDetailsById("2");
-        dataBaseFields.closeDatabaseConnection();
         launch(args);
 
     }

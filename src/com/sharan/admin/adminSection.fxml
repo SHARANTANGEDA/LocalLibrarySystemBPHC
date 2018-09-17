@@ -38,7 +38,7 @@
                     </font>
                 </Button>
                 <Button text="Delete Librarian" textAlignment="CENTER"
-                        style="-fx-text-fill:WHITE; -fx-background-color:GREEN" GridPane.columnSpan="2">
+                        style="-fx-text-fill:WHITE; -fx-background-color:GREEN" GridPane.columnSpan="2" onAction="#handleButtonClickDeleteLibrarian">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
