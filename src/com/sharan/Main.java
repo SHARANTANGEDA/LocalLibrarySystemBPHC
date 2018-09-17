@@ -18,7 +18,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("mainWindow.fxml"));
         primaryStage.setTitle("LMS@BPHC");
-        primaryStage.setScene(new Scene(root, 700, 500));
+        primaryStage.setScene(new Scene(root, 900, 650));
         primaryStage.show();
         }
 

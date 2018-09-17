@@ -31,14 +31,14 @@
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
                 </Button>
-                <Button text="View Librarian" textAlignment="CENTER"
+                <Button text="View Librarian" textAlignment="CENTER" onAction="#handleButtonClickViewLibrarian"
                         style="-fx-text-fill:WHITE; -fx-background-color:GREEN" >
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
                 </Button>
-                <Button text="Delete Librarian" textAlignment="CENTER"
-                        style="-fx-text-fill:WHITE; -fx-background-color:GREEN" GridPane.columnSpan="2" onAction="#handleButtonClickDeleteLibrarian">
+                <Button text="Delete Librarian" textAlignment="CENTER" onAction="#handleButtonClickDeleteLibrarian"
+                        style="-fx-text-fill:WHITE; -fx-background-color:GREEN" GridPane.columnSpan="2" >
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
