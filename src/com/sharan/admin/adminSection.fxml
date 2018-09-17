@@ -43,7 +43,7 @@
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
                 </Button>
-                <Button text="Logout" textAlignment="CENTER"
+                <Button text="Logout" textAlignment="CENTER" onAction="#handleButtonClickLogout"
                         style="-fx-text-fill:WHITE; -fx-background-color:GREEN" >
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />

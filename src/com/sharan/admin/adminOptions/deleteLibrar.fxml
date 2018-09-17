@@ -41,13 +41,13 @@
     <bottom>
         <GridPane alignment="CENTER" hgap="10" vgap="10">
             <VBox spacing="18" alignment="CENTER">
-                <Button fx:id="confirmDelete" style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Confirm Delete" textAlignment="CENTER"
+                <Button style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Confirm Delete" textAlignment="CENTER"
                         wrapText="true" onAction="#handleButtonClickConfirmDelete">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
                 </Button>
-                <Button fx:id="goBack" style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Go Back" textAlignment="CENTER"
+                <Button style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Go Back" textAlignment="CENTER"
                         wrapText="true" onAction="#handleButtonClickGoBack">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />

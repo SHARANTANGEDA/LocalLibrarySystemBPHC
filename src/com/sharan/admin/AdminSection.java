@@ -32,4 +32,10 @@ public class AdminSection extends Controller {
         deleteLibrarian=FXMLLoader.load(getClass().getResource(fileName));
         adminSection.getChildren().setAll(deleteLibrarian);
     }
+
+    @FXML public void handleButtonClickLogout(ActionEvent event) throws Exception {
+        fileName="adminLoginPage.fxml";
+        adminSignIn=FXMLLoader.load(getClass().getResource(fileName));
+        adminSection.getChildren().setAll(adminSignIn);
+    }
 }
