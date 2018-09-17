@@ -1,4 +1,4 @@
-package com.sharan.admin.adminOptions;
+package com.sharan.admin.adminOptions.deleteLibrarian;
 
 import com.sharan.DataBaseFields;
 import com.sharan.admin.AdminSection;
@@ -11,7 +11,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
-import javax.imageio.IIOException;
 
 import java.io.IOException;
 
@@ -58,7 +57,7 @@ public class DeleteLibrarian extends AdminSection {
         }
     }
     public void handleButtonClickGoBack(ActionEvent event) throws IOException {
-        fileName="../adminSection.fxml";
+        fileName="../../adminSection.fxml";
         BorderPane pane = FXMLLoader.load(getClass().getResource(fileName));
         deleteLibrarian.getChildren().setAll(pane);
     }

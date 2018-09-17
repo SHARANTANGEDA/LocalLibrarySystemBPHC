@@ -1,4 +1,4 @@
-package com.sharan.admin.adminOptions;
+package com.sharan.admin.adminOptions.addLibrarian;
 
 
 import com.sharan.DataBaseFields;
@@ -107,7 +107,7 @@ public class AddLibrarian extends AdminSection {
 
     }
     public void handleButtonClickgoBackToAdminOptions(ActionEvent event) throws Exception{
-        fileName="../adminSection.fxml";
+        fileName="../../adminSection.fxml";
         BorderPane pane = FXMLLoader.load(getClass().getResource(fileName));
         addLibrarian.getChildren().setAll(pane);
     }
