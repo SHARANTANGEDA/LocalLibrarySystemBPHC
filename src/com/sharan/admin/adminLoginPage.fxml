@@ -10,8 +10,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.PasswordField?>
 <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.sharan.Controller" fx:id="adminSignIn">
 
     <top>
@@ -39,7 +40,7 @@
                             <Font name="Comic Sans" size="14" />
                         </font>
                     </Label>
-                    <TextField/>
+                    <TextField fx:id="adminUserName" />
                 </HBox>
                 <HBox spacing="15">
                     <Label text="Password:  " textAlignment="RIGHT" >
@@ -47,8 +48,13 @@
                             <Font name="Comic Sans" size="14" />
                         </font>
                     </Label>
-                    <TextField/>
+                    <PasswordField fx:id="adminPassword"/>
                 </HBox>
+                <Label  fx:id="inValidCredentials" style="-fx-text-fill: RED">
+                    <font>
+                        <Font name="Comic Sans italic" size="16" />
+                    </font>
+                </Label>
                 <HBox spacing="15">
                     <Button text="Login" style="-fx-text-fill:WHITE; -fx-background-color:GREEN"
                             textAlignment="CENTER" wrapText="true" onAction="#handleButtonClickAdminSignIn">

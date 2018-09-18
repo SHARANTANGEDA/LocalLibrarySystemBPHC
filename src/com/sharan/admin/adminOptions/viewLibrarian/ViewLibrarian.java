@@ -1,19 +1,20 @@
 package com.sharan.admin.adminOptions.viewLibrarian;
 
+import com.sharan.Main;
 import com.sharan.admin.AdminSection;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.util.Callback;
+import javafx.scene.layout.BorderPane;
 
-import java.net.URL;
+import java.io.IOException;
 import java.sql.*;
-import java.util.ResourceBundle;
+
+import static com.sharan.Main.fileName;
 
 public class ViewLibrarian extends AdminSection {
     private static final String DB_NAME = "librarianDetails.db";
@@ -74,12 +75,6 @@ public class ViewLibrarian extends AdminSection {
         statement = connection.createStatement();
     }
 
-    private String idIncrementer(String id) {
-        int intId = Integer.parseInt(id);
-        intId = intId + 1;
-        String newID = String.valueOf(intId);
-        return newID;
-    }
 
     private void closeDatabaseConnection() {
         try {
@@ -116,6 +111,13 @@ public class ViewLibrarian extends AdminSection {
             observableList.add(dataViewer);
         }
         tableView.setItems(observableList);
+    }
+
+    @FXML
+    public void handleButtonClickGoBack() throws IOException {
+        fileName="../../adminSection.fxml";
+        BorderPane pane= FXMLLoader.load(getClass().getResource(fileName));
+        viewLibrarian.getChildren().setAll(pane);
     }
 }
 

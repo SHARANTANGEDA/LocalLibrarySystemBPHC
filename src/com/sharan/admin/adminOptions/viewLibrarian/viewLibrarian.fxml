@@ -30,7 +30,8 @@
     <bottom>
         <GridPane alignment="CENTER" hgap="10" vgap="10">
         <VBox alignment="CENTER" spacing="18">
-        <Button style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Go Back" textAlignment="CENTER" wrapText="true">
+        <Button style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Go Back" textAlignment="CENTER" wrapText="true"
+        onAction="#handleButtonClickGoBack">
             <font>
                 <Font name="Comic Sans MS" size="24.0" />
             </font>

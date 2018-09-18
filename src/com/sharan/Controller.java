@@ -1,8 +1,12 @@
 package com.sharan;
 
+import com.sharan.admin.AdminCredentials;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
 
@@ -26,7 +30,14 @@ public class Controller {
     @FXML
     protected BorderPane librarianSection;
 
+    @FXML
+    private TextField adminUserName;
 
+    @FXML
+    private PasswordField adminPassword;
+
+    @FXML
+    private Label inValidCredentials;
 
 
     @FXML
@@ -52,10 +63,24 @@ public class Controller {
     }
 
     @FXML
-    public void handleButtonClickAdminSignIn(ActionEvent event) throws Exception {
-        fileName = "admin/adminSection.fxml";
-        adminSection = FXMLLoader.load(getClass().getResource(fileName));
-        adminSignIn.getChildren().setAll(adminSection);
+    private void handleButtonClickAdminSignIn(ActionEvent event) throws Exception {
+        String typedUserName=adminUserName.getText().trim();
+        String typedPassword=adminPassword.getText().trim();
+        if((typedUserName.equalsIgnoreCase(AdminCredentials.getUsername())) && (typedPassword.equals(AdminCredentials.getPassword()))) {
+            fileName = "admin/adminSection.fxml";
+            adminUserName.setText("");
+            adminPassword.setText("");
+            adminSection = FXMLLoader.load(getClass().getResource(fileName));
+            adminSignIn.getChildren().setAll(adminSection);
+        }else  {
+            adminUserName.setText("");
+            adminPassword.setText("");
+            inValidCredentials.setText("Please enter valid username and password!");
+        }
+
+
+
+
     }
 
     @FXML

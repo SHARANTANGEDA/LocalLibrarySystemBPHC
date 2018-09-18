@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sharan.Controller" fx:id="rootPane"
             maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="500.0" prefWidth="700.0">
+            prefHeight="650.0" prefWidth="900.0">
     <top>
         <GridPane alignment="TOP_CENTER" hgap="10" vgap="10">
             <Label fx:id="mainHeading" style="-fx-text-fill: BLUE; -fx-background-color:YELLOW  " text="Welcome To BPHC Library Management System" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
