@@ -1,4 +1,4 @@
-package com.sharan.admin.adminOptions.deleteLibrarian;
+package com.sharan.admin.adminOptions.deleteStudent;
 
 import com.sharan.DataBaseFields;
 import com.sharan.admin.AdminSection;
@@ -17,7 +17,7 @@ import java.io.IOException;
 import static com.sharan.Main.fileName;
 
 
-public class DeleteLibrarian extends AdminSection {
+public class DeleteStudent extends AdminSection {
 
 
     @FXML

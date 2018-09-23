@@ -13,7 +13,7 @@
             prefHeight="500.0" prefWidth="700.0" >
     <top>
         <GridPane alignment="TOP_CENTER" hgap="10" vgap="10">
-            <Label style="-fx-text-fill: BLUE; -fx-background-color:YELLOW  " text="Welcome To LMS Librarian Login Page" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label style="-fx-text-fill: BLUE; -fx-background-color:YELLOW  " text="Welcome To LMS Student Login Page" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
                 <font>
                     <Font name="Times New Roman bold" size="36" />
                 </font>

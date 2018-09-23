@@ -1,6 +1,5 @@
-package com.sharan.admin.adminOptions.viewLibrarian;
+package com.sharan.admin.adminOptions.viewStudent;
 
-import com.sharan.Main;
 import com.sharan.admin.AdminSection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,8 +15,8 @@ import java.sql.*;
 
 import static com.sharan.Main.fileName;
 
-public class ViewLibrarian extends AdminSection {
-    private static final String DB_NAME = "librarianDetails.db";
+public class ViewStudent extends AdminSection {
+    private static final String DB_NAME = "LMSDatabase.db";
     private static final String CONNECTION_STRING = "jdbc:sqlite:/home/sharan/javaprograms/projects/LMS/";
     private static final String TABLE_NAME = "librarianDetails";
 

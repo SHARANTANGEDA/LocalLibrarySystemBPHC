@@ -11,7 +11,7 @@
 <?import javafx.geometry.Insets?>
 <BorderPane fx:id="deleteLibrarian" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sharan.admin.adminOptions.deleteLibrarian.DeleteLibrarian">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sharan.admin.adminOptions.deleteStudent.DeleteStudent">
     <top>
         <VBox alignment="CENTER" spacing="30">
             <Label style="-fx-text-fill: BLUE; -fx-background-color:YELLOW  " text="Delete Librarian" textAlignment="CENTER" wrapText="true">

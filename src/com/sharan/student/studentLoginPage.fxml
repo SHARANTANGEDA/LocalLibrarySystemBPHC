@@ -17,7 +17,7 @@
     <top>
         <GridPane alignment="TOP_CENTER" hgap="10" vgap="10">
 
-            <Label id="heading" style="-fx-text-fill: BLUE; -fx-background-color:YELLOW  " text="Library Management System Librarian Login" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label id="heading" style="-fx-text-fill: BLUE; -fx-background-color:YELLOW  " text="Library Management System Student Login" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
                 <font>
                     <Font name="Times New Roman bold" size="36" />
                 </font>

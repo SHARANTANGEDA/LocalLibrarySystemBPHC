@@ -31,14 +31,14 @@ public class AdminSection extends Controller {
 
     @FXML
     public void handleButtonClickAddLibrarian(ActionEvent event) throws Exception {
-        fileName = "adminOptions/addLibrarian/addLibrarian.fxml";
+        fileName = "adminOptions/addStudent/addStudent.fxml";
         addLibrarian = FXMLLoader.load(getClass().getResource(fileName));
         adminSection.getChildren().setAll(addLibrarian);
     }
 
     @FXML
     public void handleButtonClickDeleteLibrarian(ActionEvent event) throws Exception {
-        fileName="adminOptions/deleteLibrarian/deleteLibrar.fxml";
+        fileName="adminOptions/deleteStudent/deleteStudent.fxml";
         deleteLibrarian=FXMLLoader.load(getClass().getResource(fileName));
         adminSection.getChildren().setAll(deleteLibrarian);
     }
@@ -52,7 +52,7 @@ public class AdminSection extends Controller {
 
     @FXML
     public void handleButtonClickViewLibrarian(ActionEvent event) throws Exception {
-        fileName="adminOptions/viewLibrarian/viewLibrarian.fxml";
+        fileName="adminOptions/viewStudent/viewStudent.fxml";
         viewLibrarian=FXMLLoader.load(getClass().getResource(fileName));
         adminSection.getChildren().setAll(viewLibrarian);
     }

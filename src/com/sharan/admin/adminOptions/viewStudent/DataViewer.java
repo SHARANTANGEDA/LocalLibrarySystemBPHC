@@ -1,9 +1,7 @@
-package com.sharan.admin.adminOptions.viewLibrarian;
+package com.sharan.admin.adminOptions.viewStudent;
 
-import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 
 public class DataViewer {
     public SimpleStringProperty id = new SimpleStringProperty();

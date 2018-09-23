@@ -1,4 +1,4 @@
-package com.sharan.admin.adminOptions.addLibrarian;
+package com.sharan.admin.adminOptions.addStudent;
 
 
 import com.sharan.DataBaseFields;
@@ -15,7 +15,7 @@ import javafx.scene.paint.Paint;
 
 import static com.sharan.Main.fileName;
 
-public class AddLibrarian extends AdminSection {
+public class AddStudent extends AdminSection {
 
     @FXML
     private TextField nameField;

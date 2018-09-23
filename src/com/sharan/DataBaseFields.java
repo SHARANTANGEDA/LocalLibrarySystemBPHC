@@ -2,15 +2,12 @@ package com.sharan;
 
 
 import java.io.*;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+
 import java.sql.*;
 
 
 public class DataBaseFields {
-    private static final String DB_NAME = "librarianDetails.db";
+    private static final String DB_NAME = "LMSDatabase.db";
     private static final String CONNECTION_STRING = "jdbc:sqlite:/home/sharan/javaprograms/projects/LMS/";
     private static final String TABLE_NAME = "librarianDetails ";
     private static final String TABLE_COLUMNS = "(ID INTEGER,Name TEXT,Password TEXT,Email TEXT,Address TEXT,City TEXT,Contact INTEGER)";

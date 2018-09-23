@@ -4,45 +4,50 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.layout.VBox?>
-<BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sharan.Controller" fx:id="rootPane"
-            maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="650.0" prefWidth="900.0">
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane fx:id="rootPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sharan.Controller"
+            style="-fx-background-image: url('/home/sharan/javaprograms/projects/LMS/backgound.png')">
+
     <top>
         <GridPane alignment="TOP_CENTER" hgap="10" vgap="10">
-            <Label fx:id="mainHeading" style="-fx-text-fill: BLUE; -fx-background-color:YELLOW  " text="Welcome To BPHC Library Management System" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label fx:id="mainHeading" style="-fx-text-fill: BLUE; -fx-background-color:YELLOW  " text="Welcome To BPHC Library Management System"
+                   textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
                 <font>
                     <Font name="Times New Roman bold" size="36" />
                 </font>
             </Label>
 
+
         </GridPane>
     </top>
 
     <center>
-        <GridPane alignment="CENTER"  hgap="10" vgap="10">
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
             <Text text="Choose Your Division" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
                 <font>
                     <Font name="Courier New Bold Italic" size="20.0" />
                 </font>
             </Text>
             <VBox alignment="CENTER" spacing="25" GridPane.columnIndex="0" GridPane.rowIndex="4">
-                <Button fx:id="adminLogin" style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Admin Login" textAlignment="CENTER"
-                onAction="#handleButtonClickAdmin">
+                <Button fx:id="adminLogin" onAction="#handleButtonClickAdmin" style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Admin Login" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
                 </Button>
-                <Button fx:id="librarianLogin" style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Librarian Login" textAlignment="CENTER"
-                onAction="#handleButtonClickLibrarian">
+                <Button fx:id="librarianLogin" onAction="#handleButtonClickLibrarian" style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Student Login" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
                 </Button>
             </VBox>
+
         </GridPane>
     </center>
 

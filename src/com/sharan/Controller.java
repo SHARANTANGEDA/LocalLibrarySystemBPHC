@@ -56,7 +56,7 @@ public class Controller {
 
     @FXML
     public void handleButtonClickLibrarian(ActionEvent event) throws Exception {
-        fileName = "librarian/librarianLoginPage.fxml";
+        fileName = "student/studentLoginPage.fxml";
         librarianSignIn = FXMLLoader.load(getClass().getResource(fileName));
         rootPane.getChildren().add(librarianSignIn);
         rootPane.getChildren().setAll(librarianSignIn);
@@ -85,7 +85,7 @@ public class Controller {
 
     @FXML
     public void handleButtonClickLibrarianSignIn(ActionEvent event) throws Exception {
-        fileName = "librarian/librarianSection.fxml";
+        fileName = "student/studentSection.fxml";
         librarianSection= FXMLLoader.load(getClass().getResource(fileName));
         librarianSignIn.getChildren().setAll(librarianSection);
     }
