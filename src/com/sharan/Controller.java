@@ -93,11 +93,16 @@ public class Controller {
     @FXML
     public void handleButtonClickReturntoMainMenu(ActionEvent event) throws Exception {
         fileName = "mainWindow.fxml";
-        BorderPane pane = FXMLLoader.load(getClass().getResource(fileName));
-        adminSignIn.getChildren().setAll(pane);
+        rootPane = FXMLLoader.load(getClass().getResource(fileName));
+        librarianSignIn.getChildren().setAll(rootPane);
     }
 
-
+    @FXML
+    public void handleButtonClickStudentLogout(ActionEvent event) throws Exception {
+        fileName = "student/studentLoginPage.fxml";
+        librarianSignIn= FXMLLoader.load(getClass().getResource(fileName));
+        librarianSection.getChildren().setAll(librarianSignIn);
+    }
 
 
 }
