@@ -44,12 +44,12 @@ public class DeleteStudent extends AdminSection {
             alert.showAndWait();
             if (alert.getResult()== ButtonType.OK){
                 dataBaseFields.deleteLibrarianDetailsById(id);
+                dataBaseFields.idDecrementer();
                 dataBaseFields.closeDatabaseConnection();
                 enterID.setText("");
 
             }else {
-                inputAlert.setText("Didnt delete");
-                dataBaseFields.idDecrementer();
+                inputAlert.setText("Didn't delete");
                 dataBaseFields.closeDatabaseConnection();
 
             }

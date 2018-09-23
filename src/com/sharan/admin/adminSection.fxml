@@ -25,19 +25,19 @@
     <center>
         <GridPane hgap="10" vgap="10" alignment="CENTER" >
             <VBox spacing="25" GridPane.rowIndex="0" GridPane.columnIndex="0" alignment="CENTER">
-                <Button text="Add Librarian"  textAlignment="CENTER" onAction="#handleButtonClickAddLibrarian"
+                <Button text="Add Student"  textAlignment="CENTER" onAction="#handleButtonClickAddLibrarian"
                         style="-fx-text-fill:WHITE; -fx-background-color:GREEN" >
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
                 </Button>
-                <Button text="View Librarian" textAlignment="CENTER" onAction="#handleButtonClickViewLibrarian"
+                <Button text="View Student" textAlignment="CENTER" onAction="#handleButtonClickViewLibrarian"
                         style="-fx-text-fill:WHITE; -fx-background-color:GREEN" >
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
                 </Button>
-                <Button text="Delete Librarian" textAlignment="CENTER" onAction="#handleButtonClickDeleteLibrarian"
+                <Button text="Delete Student" textAlignment="CENTER" onAction="#handleButtonClickDeleteLibrarian"
                         style="-fx-text-fill:WHITE; -fx-background-color:GREEN" GridPane.columnSpan="2" >
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />

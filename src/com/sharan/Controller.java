@@ -39,6 +39,8 @@ public class Controller {
     @FXML
     private Label inValidCredentials;
 
+    @FXML
+    private BorderPane addBook;
 
     @FXML
     public void initialize() {
@@ -65,8 +67,10 @@ public class Controller {
     @FXML
     private void handleButtonClickAdminSignIn(ActionEvent event) throws Exception {
         String typedUserName=adminUserName.getText().trim();
-        String typedPassword=adminPassword.getText().trim();
-        if((typedUserName.equalsIgnoreCase(AdminCredentials.getUsername())) && (typedPassword.equals(AdminCredentials.getPassword()))) {
+        PasswordHashing passwordHashing = new PasswordHashing();
+        String encryptedPassword=passwordHashing.hashPassword(adminPassword.getText().trim());
+
+        if((typedUserName.equalsIgnoreCase(AdminCredentials.getUsername())) && (encryptedPassword.equals(AdminCredentials.getHashedPassword()))) {
             fileName = "admin/adminSection.fxml";
             adminUserName.setText("");
             adminPassword.setText("");
@@ -77,9 +81,6 @@ public class Controller {
             adminPassword.setText("");
             inValidCredentials.setText("Please enter valid username and password!");
         }
-
-
-
 
     }
 
@@ -94,7 +95,7 @@ public class Controller {
     public void handleButtonClickReturntoMainMenu(ActionEvent event) throws Exception {
         fileName = "mainWindow.fxml";
         rootPane = FXMLLoader.load(getClass().getResource(fileName));
-        librarianSignIn.getChildren().setAll(rootPane);
+        adminSignIn.getChildren().setAll(rootPane);
     }
 
     @FXML
@@ -105,6 +106,12 @@ public class Controller {
     }
 
 
+    @FXML
+    public void handleButtonClickAddBook(ActionEvent event) throws Exception {
+        fileName = "addBooks/addBooks.fxml";
+        addBook= FXMLLoader.load(getClass().getResource(fileName));
+        librarianSection.getChildren().setAll(addBook);
+    }
 }
 
 

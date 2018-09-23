@@ -2,6 +2,7 @@ package com.sharan.admin.adminOptions.addStudent;
 
 
 import com.sharan.DataBaseFields;
+import com.sharan.PasswordHashing;
 import com.sharan.admin.AdminSection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,10 +28,10 @@ public class AddStudent extends AdminSection {
     private TextField emailField;
 
     @FXML
-    private TextField addressField;
+    private TextField idNumberField;
 
     @FXML
-    private TextField cityField;
+    private TextField roomNoField;
 
     @FXML
     private TextField numberField;
@@ -43,22 +44,26 @@ public class AddStudent extends AdminSection {
         String name;
         String password;
         String email;
-        String address;
-        String city;
+        String idNumber;
+        String roomNo;
         boolean checker;
-        long contact;
         name = nameField.getText().trim();
         password = passwordField.getText().trim();
         email = emailField.getText().trim();
-        address = addressField.getText().trim();
-        city = cityField.getText().trim();
-        if (numberField.getText().trim().isEmpty()) {
+        idNumber = idNumberField.getText().trim();
+        roomNo = roomNoField.getText().trim();
+        if ((numberField.getText().trim().isEmpty())){
             checker = false;
         } else {
             checker = true;
         }
-        if ((!name.isEmpty()) && (!password.isEmpty()) && (!email.isEmpty()) && (!address.isEmpty()) && (!city.isEmpty()) && (checker)) {
-            return true;
+        if ((!name.isEmpty()) && (!password.isEmpty()) && (!email.isEmpty()) && (!idNumber.isEmpty()) && (!roomNo.isEmpty()) && (checker)) {
+            if(numberField.getText().trim().matches("[0-9]+")){
+                return true;
+            }
+            else {
+                return false;
+            }
         } else {
             return false;
         }
@@ -77,25 +82,28 @@ public class AddStudent extends AdminSection {
             name = nameField.getText().trim();
             password = passwordField.getText().trim();
             email = emailField.getText().trim();
-            address = addressField.getText().trim();
-            city = cityField.getText().trim();
+            address = idNumberField.getText().trim();
+            city = roomNoField.getText().trim();
 
-            DataBaseFields dataBaseFields = new DataBaseFields();
-            dataBaseFields.initializeConnection();
-            dataBaseFields.addLibrarianDetails(name, password, email, address, city, numberField.getText().trim());
+            PasswordHashing passwordHashing =new PasswordHashing();
+            String str=passwordHashing.hashPassword(password);
+
 
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Success");
             alert.setHeaderText("Details Successfully added to DataBase");
             alert.showAndWait();
-            if (alert.getResult() == ButtonType.OK) {
+            if ((alert.getResult() == ButtonType.OK)) {
                 alert.close();
+                DataBaseFields dataBaseFields = new DataBaseFields();
+                dataBaseFields.initializeConnection();
+                dataBaseFields.addLibrarianDetails(name, str, email, address, city, numberField.getText().trim());
                 nameField.setText("");
                 passwordField.setText("");
                 emailField.setText("");
-                addressField.setText("");
-                cityField.setText("");
+                idNumberField.setText("");
+                roomNoField.setText("");
                 numberField.setText("");
             }
 

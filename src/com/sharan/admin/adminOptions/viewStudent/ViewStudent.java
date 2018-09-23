@@ -17,7 +17,7 @@ import static com.sharan.Main.fileName;
 
 public class ViewStudent extends AdminSection {
     private static final String DB_NAME = "LMSDatabase.db";
-    private static final String CONNECTION_STRING = "jdbc:sqlite:/home/sharan/javaprograms/projects/LMS/";
+    private static final String CONNECTION_STRING = "jdbc:sqlite:";
     private static final String TABLE_NAME = "librarianDetails";
 
 
@@ -57,7 +57,6 @@ public class ViewStudent extends AdminSection {
         address.setCellValueFactory(new PropertyValueFactory<>("address"));
         contactNo.setCellValueFactory(new PropertyValueFactory<>("contact"));
         city.setCellValueFactory(new PropertyValueFactory<>("city"));
-
         try {
             openConnection();
             getDataFromDatabase();
@@ -90,11 +89,7 @@ public class ViewStudent extends AdminSection {
     }
 
     public void getDataFromDatabase() throws Exception {
-//        File file = new File("/home/sharan/javaprograms/projects/LMS/RowIdInserter.txt");
-//        BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-//        String idfile;
-//        idfile = bufferedReader.readLine();
-//        String idControl = "0";
+
         observableList = FXCollections.observableArrayList();
         ResultSet resultSet = statement.executeQuery("SELECT ID, Name, Email, Address, City, Contact FROM " + TABLE_NAME);
         while (resultSet.next()) {

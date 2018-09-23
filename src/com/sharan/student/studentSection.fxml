@@ -24,7 +24,8 @@
     <center>
         <GridPane alignment="CENTER" hgap="30" vgap="10">
                 <VBox alignment="CENTER_LEFT" spacing="25" GridPane.columnIndex="0" GridPane.rowIndex="0">
-                    <Button style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Add Books" textAlignment="CENTER" wrapText="true">
+                    <Button style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Add Books" textAlignment="CENTER" wrapText="true"
+                                    onAction="#handleButtonClickAddBook">
                         <font>
                             <Font name="Comic Sans MS" size="24.0" />
                         </font>

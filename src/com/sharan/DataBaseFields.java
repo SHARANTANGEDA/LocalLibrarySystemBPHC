@@ -8,7 +8,7 @@ import java.sql.*;
 
 public class DataBaseFields {
     private static final String DB_NAME = "LMSDatabase.db";
-    private static final String CONNECTION_STRING = "jdbc:sqlite:/home/sharan/javaprograms/projects/LMS/";
+    private static final String CONNECTION_STRING = "jdbc:sqlite:";
     private static final String TABLE_NAME = "librarianDetails ";
     private static final String TABLE_COLUMNS = "(ID INTEGER,Name TEXT,Password TEXT,Email TEXT,Address TEXT,City TEXT,Contact INTEGER)";
     private static final String TABLE_COLUMNS_INSERT = "(ID ,Name ,Password ,Email ,Address ,City ,Contact) ";
@@ -25,7 +25,7 @@ public class DataBaseFields {
     private Statement statement = null;
 
     private String idIncrementer() throws IOException {
-        File file = new File("/home/sharan/javaprograms/projects/LMS/RowIdInserter.txt");
+        File file = new File("./RowIdInserter.txt");
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         String id;
         id=bufferedReader.readLine();
@@ -42,7 +42,8 @@ public class DataBaseFields {
 
     }
     public void idDecrementer() throws IOException{
-            File file = new File("/home/sharan/javaprograms/projects/LMS/RowIdInserter.txt");
+
+            File file = new File("./RowIdInserter.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
             String id;
             id=bufferedReader.readLine();
@@ -78,7 +79,19 @@ public class DataBaseFields {
         String id = this.ID;
 
         try {
+            ResultSet rs = statement.executeQuery("SELECT ID FROM "+TABLE_NAME);
+            StringBuilder sb=new StringBuilder();
             String idinc=idIncrementer();
+//
+//            while (rs.next()){
+////                sb.append(rs.getInt(ID));
+////                sb.append(" ");
+//                if (rs.getInt(ID)==(Integer.parseInt(idinc)))
+//                {
+//                    idinc=idIncrementer();
+//                }
+//
+//            }
             statement.execute("INSERT INTO " + TABLE_NAME + TABLE_COLUMNS_INSERT +
                     "VALUES(" + idinc + ",'" + name + "','" + password + "','" + email + "','" + address + "','" + city + "'," + contact + ")");
 

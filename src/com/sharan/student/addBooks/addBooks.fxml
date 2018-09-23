@@ -8,19 +8,18 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="addLibrarian" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+<BorderPane fx:id="addBook" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sharan.admin.adminOptions.addStudent.AddStudent">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sharan.Controller">
     <top>
         <VBox alignment="CENTER" spacing="30">
-            <Label style="-fx-text-fill: BLUE; -fx-background-color:YELLOW  " text="Add Librarian" textAlignment="CENTER" wrapText="true" >
+            <Label style="-fx-text-fill: BLUE; -fx-background-color:YELLOW  " text="Add Book" textAlignment="CENTER" wrapText="true" >
                 <font>
                     <Font name="Times New Roman bold" size="36" />
                 </font>
             </Label>
-            <Label fx:id="alertLabel" text="Enter The Details to Add Librarian">
+            <Label fx:id="alertLabel" text="Enter The Details to Add Book">
                 <font>
                     <Font name="Courier New Bold Italic" size="20.0" />
                 </font>
@@ -33,47 +32,42 @@
         <GridPane alignment="CENTER_RIGHT" hgap="10" vgap="10">
             <VBox alignment="CENTER_RIGHT" spacing="18">
 
-                <Label text="Name:" textAlignment="RIGHT">
+                <Label text="Book Name:" textAlignment="RIGHT">
                     <font>
                         <Font name="Comic Sans" size="14" />
                     </font>
                 </Label>
 
-                <Label text="Password:" textAlignment="RIGHT">
-                <font>
-                    <Font name="Comic Sans" size="14" />
-                </font>
-                </Label>
+                <Label text="Title:" textAlignment="RIGHT">
+                    <font>
+                        <Font name="Comic Sans" size="14" />
+                    </font>
+                </Label>6
 
-                <Label text="Email:" textAlignment="RIGHT">
+                <Label text="Publication:" textAlignment="RIGHT">
                     <font>
                         <Font name="Comic Sans" size="14" />
                     </font>
                 </Label>
 
-                <Label text="Id Number:" textAlignment="RIGHT">
+                <Label text="Author:" textAlignment="RIGHT">
                     <font>
                         <Font name="Comic Sans" size="14" />
                     </font>
                 </Label>
 
-                <Label text="Room No:" textAlignment="RIGHT">
+                <Label text="Quantity:" textAlignment="RIGHT">
                     <font>
                         <Font name="Comic Sans" size="14" />
                     </font>
                 </Label>
 
-                <Label text="Contact No:" textAlignment="RIGHT">
-                    <font>
-                        <Font name="Comic Sans" size="14" />
-                    </font>
-                </Label>
 
             </VBox>
 
-         <BorderPane.margin>
-            <Insets left="150.0" />
-         </BorderPane.margin>
+            <BorderPane.margin>
+                <Insets left="150.0" />
+            </BorderPane.margin>
 
         </GridPane>
     </left>
@@ -81,17 +75,16 @@
     <right>
         <GridPane alignment="CENTER" hgap="10" vgap="10">
             <VBox alignment="CENTER_LEFT" spacing="18">
-                <TextField fx:id="nameField"/>
-                <TextField fx:id="passwordField"/>
-                <TextField fx:id="emailField"/>
-                <TextField fx:id="idNumberField"/>
-                <TextField fx:id="roomNoField"/>
-                <TextField fx:id="numberField"/>
+                <TextField/>
+                <TextField />
+                <TextField/>
+                <TextField />
+                <TextField />
             </VBox>
 
-         <BorderPane.margin>
-            <Insets right="150.0" />
-         </BorderPane.margin>
+            <BorderPane.margin>
+                <Insets right="150.0" />
+            </BorderPane.margin>
 
         </GridPane>
     </right>
@@ -106,14 +99,14 @@
                 </Button>
 
                 <Button fx:id="goBack" style="-fx-text-fill:WHITE; -fx-background-color:GREEN" text="Back" textAlignment="CENTER" wrapText="true"
-                onAction="#handleButtonClickgoBackToAdminOptions">
+                        onAction="#handleButtonClickgoBackToAdminOptions">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
                 </Button>
-            <GridPane.margin>
-               <Insets bottom="25.0" />
-            </GridPane.margin>
+                <GridPane.margin>
+                    <Insets bottom="25.0" />
+                </GridPane.margin>
 
             </VBox>
         </GridPane>
