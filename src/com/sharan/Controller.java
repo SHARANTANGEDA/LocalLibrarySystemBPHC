@@ -108,9 +108,16 @@ public class Controller {
 
     @FXML
     public void handleButtonClickAddBook(ActionEvent event) throws Exception {
-        fileName = "addBooks/addBooks.fxml";
+        fileName = "student/addBooks/addBooks.fxml";
         addBook= FXMLLoader.load(getClass().getResource(fileName));
         librarianSection.getChildren().setAll(addBook);
+    }
+
+    @FXML
+    public void handleButtonClickStudentReturntoMainMenu(ActionEvent event) throws Exception {
+        fileName = "mainWindow.fxml";
+        rootPane = FXMLLoader.load(getClass().getResource(fileName));
+        librarianSignIn.getChildren().setAll(rootPane);
     }
 }
 

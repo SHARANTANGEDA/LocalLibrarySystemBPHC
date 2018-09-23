@@ -58,7 +58,7 @@
                     </Button>
 
                     <Button text="Return to Main Screen " style="-fx-text-fill:WHITE; -fx-background-color:GREEN"
-                            textAlignment="CENTER" wrapText="true" onAction="#handleButtonClickReturntoMainMenu">
+                            textAlignment="CENTER" wrapText="true" onAction="#handleButtonClickStudentReturntoMainMenu">
                         <font>
                             <Font name="Comic Sans MS" size="24.0" />
                         </font>
